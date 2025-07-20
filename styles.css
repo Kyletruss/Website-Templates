@@ -1,0 +1,7 @@
+.websiteThumbnail{
+    width: 30%;
+    border-radius: 20px;
+}
+.websiteThumbnail:hover{
+    cursor: pointer;
+}
