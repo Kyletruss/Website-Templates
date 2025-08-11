@@ -429,3 +429,128 @@ nav{
 .philosophy h4{
     color: var(--heading-color);
 }
+
+.contact-section{
+    background-color: rgba(var(--primary-bg-color));
+    padding: 32px 5%;
+    
+}
+
+.contact-flex{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    row-gap: 24px;
+}
+
+
+.contact-left{
+    background-color: var(--card-bg-color);
+    width: 65%;
+    border-radius: 12px;
+    border: solid 1.5px #2e2e38;
+    transition: 0.3s ease;
+    padding: 12px;
+    text-align: left;
+}
+
+.contact-right{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+}
+
+@media (max-width: 750px) {
+
+    .contact-left{
+        width: 100%;
+    }
+    .contact-right{
+        width: 100%;
+    }
+}
+.contact-right-card{
+    background-color: var(--card-bg-color);
+    border-radius: 12px;
+    border: solid 1.5px #2e2e38;
+    transition: 0.3s ease;
+    padding: 12px;
+    text-align: left;
+}
+
+.contact-right h3{
+    color: var(--heading-color);
+}
+
+
+
+.contact-right-card:hover{
+    transform: scale(1.05);
+    border: solid 1.5px rgba(var(--primary-color));
+    box-shadow: 0 0 10px rgba(var(--primary-color));
+
+}
+
+
+.contact-left:hover{
+
+        transform: scale(1.05);
+    border: solid 1.5px rgba(var(--primary-color));
+    box-shadow: 0 0 10px rgba(var(--primary-color));
+}
+
+
+.contact-left h3{
+    color: rgba(var(--primary-color));
+}
+
+.contact-form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 12px;
+}
+
+.contact-form label{
+    color: var(--heading-color);
+
+}
+
+.contact-form input{
+    width: 100%;
+    background-color: #121216;
+    border-radius: 8px;
+    border: solid 1.5px #2e2e38;
+    padding: 6px;
+
+}
+
+
+.contact-form textarea{
+    background-color: #121216;
+    border-radius: 8px;
+    border: solid 1.5px #2e2e38;
+    padding: 6px;
+
+}
+
+.contact-form select{
+    background-color: #121216;
+    border-radius: 8px;
+    border: solid 1.5px #2e2e38;
+    padding: 6px;
+
+}
+
+
+.half-contact{
+    width: 48%;
+}
+
+.full-contact{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
