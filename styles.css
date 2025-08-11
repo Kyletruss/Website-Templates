@@ -73,6 +73,11 @@ p{
     color: rgba(var(--foreground-color));
 }
 
+.gradient-header{
+    background: linear-gradient(to right, rgba(var(--foreground-color)), rgba(var(--primary-color)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
 section{
     display: flex;
@@ -354,4 +359,29 @@ nav{
 
 .about-stat span{
     color: #a1a1aa;
+}
+
+.design-philosophy{
+    background-color: rgba(var(--primary-bg-color));
+}
+
+.philosophies{
+    display: flex;
+    column-gap: 5%;
+    width: 100%;
+    padding: 0% 10%;
+}
+
+.philosophy{
+    width: 30%;
+}
+
+.philosophy img{
+    width: 20%;
+    border-radius: 100%;
+    margin-bottom: 12px;
+}
+
+.philosophy h4{
+    color: var(--heading-color);
 }
