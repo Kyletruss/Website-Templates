@@ -2,7 +2,7 @@ body{
     --primary-color: 240, 52, 60;
     --foreground-color: 26 29 35;
 
-    --primary-bg-color: 18, 18, 12;
+    --primary-bg-color: 18, 18, 22;
 
     --p-color: #a1a1aa;
 
@@ -50,6 +50,10 @@ body{
 
 p{
     color: var(--p-color);
+}
+
+.text-white{
+    color: var(--heading-color);
 }
 
 
@@ -446,14 +450,21 @@ nav{
 
 
 .contact-left{
-    background-color: var(--card-bg-color);
     width: 65%;
+}
+
+.contact-left-container{
+    background-color: var(--card-bg-color);
+    padding: 24px;
     border-radius: 12px;
     border: solid 1.5px #2e2e38;
-    transition: 0.3s ease;
-    padding: 12px;
     text-align: left;
+    transition: 0.3s ease;
+    position: sticky;
+    top: 100px;  
+/* transform: translateY(-50%); */
 }
+
 
 .contact-right{
     width: 30%;
@@ -476,7 +487,7 @@ nav{
     border-radius: 12px;
     border: solid 1.5px #2e2e38;
     transition: 0.3s ease;
-    padding: 12px;
+    padding: 24px;
     text-align: left;
 }
 
@@ -494,9 +505,9 @@ nav{
 }
 
 
-.contact-left:hover{
+.contact-left-container:hover{
 
-        transform: scale(1.05);
+        /* transform: scale(1.05); */
     border: solid 1.5px rgba(var(--primary-color));
     box-shadow: 0 0 10px rgba(var(--primary-color));
 }
@@ -518,32 +529,48 @@ nav{
 
 }
 
-.contact-form input{
+
+input{
     width: 100%;
     background-color: #121216;
     border-radius: 8px;
     border: solid 1.5px #2e2e38;
     padding: 6px;
-
+    color: var(--heading-color);
 }
 
-
-.contact-form textarea{
+textarea{
     background-color: #121216;
     border-radius: 8px;
     border: solid 1.5px #2e2e38;
     padding: 6px;
-
+    color: var(--heading-color);
 }
 
-.contact-form select{
+
+select{
     background-color: #121216;
     border-radius: 8px;
     border: solid 1.5px #2e2e38;
     padding: 6px;
-
+    color: var(--heading-color);
 }
 
+select:invalid{
+    color: #626262;
+
+}
+option{
+    color: #626262;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border: solid 1.5px rgba(var(--primary-color), 1); /* 1 = fully opaque */
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(var(--primary-color), 0.3); /* optional glow */
+}
 
 .half-contact{
     width: 48%;
@@ -553,4 +580,89 @@ nav{
     width: 100%;
     display: flex;
     flex-direction: column;
+}
+
+
+
+.contact-right-card h3{
+    margin-bottom: 24px;
+}
+
+footer{
+    background-color: rgb(18, 18, 10);
+    padding: 40px 12px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+
+.footer-top{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+}
+
+.footer-left{
+    width: 50%;
+    margin-bottom: 24px;
+}
+.footer-left p{
+    width: 90%;
+}
+
+.footer-right{
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+}
+
+.quick-links{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+}
+
+.quick-links a{
+    text-decoration: none;
+    color: var(--p-color);
+}
+
+.quick-links a:hover{
+    color: rgba(var(--primary-color));
+
+}
+
+.services{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.services span{
+    color: var(--p-color);
+}
+
+hr{
+    background-color: var(--border-color);
+    height: 2px;
+    margin: 32px 0px;
+}
+
+@media (max-width: 750px) {
+    .footer-right{
+        width: 100%;
+    }
+    .footer-left{
+        width: 100%;
+    }
+    .quick-links{
+        width: 100%;
+    }
+    .services{
+        width: 100%;
+    }
+
 }
